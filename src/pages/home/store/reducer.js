@@ -31,7 +31,14 @@ const defaultState = fromJS({
 		title: '晶圆代工市场2020年产值增幅预估为5%～9%',
 		desc: '今日，OPPO与沃达丰联合宣布，双方签订合作协议，建立全面合作关系，OPPO的全线手机产品将从5月起进入沃达丰欧洲市场。（鞭牛士）',
 		imgUrl: 'http://img2.imgtn.bdimg.com/it/u=3313838802,2768404782&fm=26&gp=0.jpg'
-	}]  
+  }],
+  recommendList: [{
+		id: 1,
+		imgUrl: "http://img2.imgtn.bdimg.com/it/u=3313838802,2768404782&fm=26&gp=0.jpg"
+	}, {
+		id: 2,
+		imgUrl: "http://img2.imgtn.bdimg.com/it/u=3313838802,2768404782&fm=26&gp=0.jpg"
+	}]
 })
 
 export default (state = defaultState, action) => {

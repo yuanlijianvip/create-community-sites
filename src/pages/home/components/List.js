@@ -29,4 +29,4 @@ const mapState = (state) => ({
   list: state.getIn(['home', 'articleList'])
 })
 
-export default connect(mapState)(List);
+export default connect(mapState, null)(List);
