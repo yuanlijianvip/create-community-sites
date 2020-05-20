@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators }  from './store';
 
 import {
-    HeaderWrapper,
-    Logo,
-    Nav,
-    NavItem,
-    SearchWrapper,
-    SearchInfo,
-    SearchInfoTitle,
-    SearchInfoSwitch,
-    SearchInfoList,
-    SearchInfoItem,
-    NeaSearch,
-    Addition,
-    Button
+  HeaderWrapper,
+  Logo,
+  Nav,
+  NavItem,
+  SearchWrapper,
+  SearchInfo,
+  SearchInfoTitle,
+  SearchInfoSwitch,
+  SearchInfoList,
+  SearchInfoItem,
+  NeaSearch,
+  Addition,
+  Button
 } from './style';
 
 class Header extends Component {
@@ -63,7 +64,9 @@ class Header extends Component {
         const { focused, handleInputFocus, handleInputBlur, list } = this.props;
         return (
             <HeaderWrapper>
+              <Link to='/'>
                 <Logo />
+              </Link>
                 <Nav>
                     <NavItem className="left active">首页</NavItem>
                     <NavItem className="left">下载App</NavItem>

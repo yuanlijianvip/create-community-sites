@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import Topic from './components/Topic';
 import Recommend from './components/Recommend';
@@ -13,7 +13,9 @@ import {
   BackTop
 } from './style';
 
-class Home extends Component {
+class Home extends PureComponent {
+
+  // shouldComponentUpdate() { }
 
   handleScrollTop() {
     window.scrollTo(0, 0);
