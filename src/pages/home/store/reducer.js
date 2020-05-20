@@ -1,21 +1,28 @@
 import { fromJS } from 'immutable';
-import * as contants from './constants';
+import * as constants from './constants';
 //immutable库
 
 const defaultState = fromJS({
   topicList: [],
   articleList: [],
-  recommendList: []
+  recommendList: [],
+  articlePage: 1
 })
 
 export default (state = defaultState, action) => {
     switch(action.type) {
-      case contants.CHANGE_HOME_DATA:
+      case constants.CHANGE_HOME_DATA:
         return state.merge({
           topicList: fromJS(action.topicList),
           articleList: fromJS(action.articleList),
           recommendList: fromJS(action.recommendList)
         })
+      case constants.ADD_ARTICLE_LIST:
+        return state.merge({
+          'articleList': state.get('articleList').concat(action.list),
+          'articlePage': action.nextPage
+        })
+        // state.set('articleList', state.get('articleList').concat(action.list));
         // state.set('topList', fromJS(action.topicList))
       default:
           return state;
